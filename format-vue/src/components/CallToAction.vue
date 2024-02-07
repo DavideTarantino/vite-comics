@@ -52,7 +52,7 @@ main{
         div{
             display: flex;
             align-items: center;
-            gap: 3%;
+            gap: 5%;
             color: white;
             text-transform: uppercase;
 
