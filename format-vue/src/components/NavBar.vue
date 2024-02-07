@@ -1,7 +1,7 @@
 <script>
     export default{
+        name: 'NavBar',
         data(){
-            name: 'NavBar'
             return{
                 cta: [
                     {
@@ -53,7 +53,7 @@
 <template>
     <main>
         <figure>
-            <img src="../img/favicon.ico" alt="logo">
+            <img src="../img/dc-logo.png" alt="logo">
         </figure>
             <ul>
                 <li :class=" element.current ? 'active' : '' " v-for="(element,index) in cta">{{ element.name }}</li>
@@ -61,17 +61,18 @@
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use '../assets/partials/mixins' as *;
+
     main{
+        @include page-layout;
         display: flex;
         justify-content: space-between;
-        width: 70%;
-        margin: 0 auto;
-        padding: 1%;
         align-items: center;
+        padding: 1%;
 
         img{
-            width: 150%;
+            width: 80%;
         }
 
         ul{
