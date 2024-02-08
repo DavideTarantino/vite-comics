@@ -67,7 +67,7 @@ main{
     background-image: url(../img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 52vh;
 
     section{
         @include page-layout;

@@ -3,13 +3,15 @@
     import NewContent from './components/NewContent.vue'
     import CallToAction from './components/CallToAction.vue'
     import MainSection from './components/MainSection.vue'
+    import SocialFooter from './components/SocialFooter.vue'
 
     export default {
         components: {
             NavBar,
             NewContent,
             CallToAction,
-            MainSection
+            MainSection,
+            SocialFooter
         }
     }
 </script>
@@ -22,6 +24,8 @@
     <CallToAction/>
 
     <MainSection/>
+
+    <SocialFooter/>
 </template>
 
 <style lang="scss">
