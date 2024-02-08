@@ -1,6 +1,11 @@
 <script>
+    import PropChild from './PropChild.vue';
+
     export default{
         name: 'NewContent',
+        components: {
+        PropChild
+        },
         data(){
             return{
                 series: [
@@ -85,10 +90,10 @@
 <template>
 <main>
     <section>
-        <img src="../img/jumbotron.jpg" alt="jumbotron">
+        <img id="jumbotron" src="../img/jumbotron.jpg" alt="jumbotron">
     </section>
     <section id="sezione-titoli">
-        
+        <PropChild v-for="(element, index) in series" :key="index" :propsThumbs="element.thumb" :propsTitolo="element.series"/>
     </section>
 </main>
 </template>
@@ -99,7 +104,7 @@
 main{
     background-color: black;
 
-    img{
+    #jumbotron{
         height: 42vh;
         width: 100%;
         object-fit: cover;
@@ -110,6 +115,12 @@ main{
         @include page-layout;
         padding: 2%;
         color: white;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: calc(100% / 1);
+
     }
 
 }

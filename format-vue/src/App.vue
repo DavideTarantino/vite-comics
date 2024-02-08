@@ -11,7 +11,7 @@
             NewContent,
             CallToAction,
             MainSection,
-            SocialFooter
+            SocialFooter,
         }
     }
 </script>
